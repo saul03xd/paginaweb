@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alimenta Vidas - Contacto</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="cuadro-con-texto">
+        <h6>Contactanos para cualquier duda o aclaración</h6>
+      </div>
+    <button id="btn">🍔</button>
+
+    <nav id="nav">
+        <ul>
+            <li><a href="menu.html">INICIO</a></li>
+            <li><a href="donacion.html">DONACIÓN</a></li>
+            <li><a href="contacto.html">CONTACTO</a></li>
+            <li><a href="../index.html">SALIR</a></li>
+        </ul>
+    </nav>
+
+    <form action="procesar_formulario.php" method="POST" onsubmit="return validarFormulario()">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="mensaje">Mensaje:</label><br>
+        <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script>
+        function validarFormulario() {
+            var nombre = document.getElementById('nombre').value;
+            var email = document.getElementById('email').value;
+            var mensaje = document.getElementById('mensaje').value;
+
+            if (nombre === '' || email === '' || mensaje === '') {
+                alert('Por favor, completa todos los campos.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
+
+
+<style>
+    
+
+    /* Estilos para el formulario de contacto */
+    form {
+            max-width: 400px;
+            padding: 40px;
+            background: #cdfcff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        label,
+        input,
+        textarea {
+            display: block;
+            margin-bottom: 20px;
+            width: 100%;
+            color: red;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        input[type="submit"]:focus {
+            outline: none;
+        }
+
+        /* Animación de entrada */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Estilos para el cuadro con fondo de color */
+.cuadro-con-texto {
+    position: relative;
+  background-color: #faffb2; /* Cambia este valor por el color que desees */
+  padding: 20px; /* Espaciado interno para el contenido */
+  border-radius: 8px; /* Bordes redondeados */
+  margin-bottom: 20px;
+  top: -50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+        body{
+            background-image: url(img/8.jpg);
+        }
+
+</style>
